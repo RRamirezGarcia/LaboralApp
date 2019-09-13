@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+        <!-- Color theme for statusbar -->
+        <meta name="theme-color" content="#4cd964">
+
+        <meta name="format-detection" content="telephone=no">
+
+        <meta name="msapplication-tap-highlight" content="no">
+
+        <!-- Your app title -->
+        <title>LaboralApp</title>
+        <!-- Path to Framework7 Library Bundle CSS -->
+        <link rel="stylesheet" href="packages/core/css/framework7.bundle.css">
+        <link rel="stylesheet" href="css/framework7-icons.css">
+        <!-- Path to your custom app styles-->
+        <link rel="stylesheet" href="css/MiAplicacion.css">
+
+    </head>
+    <body class="color-theme-teal"> <!-- onload="init()"-->
+        <!-- App root element -->
+        <!--reveal-->
+        <div id="app" data-page="main-page">
+
+            <!-- Agregar barra de estado para evitar superposición cuando la aplicación esté en modo pantalla completa-->
+            <div class="statusbar"></div>
+
+            <!-- Panel izquierdo con efecto cover-->
+            <div class="panel panel-left panel-cover">
+                <div class="view view-left">
+                    <div class="page">
+                        <!-- La barra de navegación es un área fija en la parte superior de una pantalla que contiene el título de la página y los elementos de navegación-->
+                        <div class="navbar bg-color-teal text-color-white">
+                            <div class="navbar-inner">
+                                <div class="title">LaboralApp</div>
+                            </div>
+                        </div>
+                        <!-- Agregar el contenido de la página-->
+                        <div class="page-content">
+                            <div class="list links-list"><!-- class="bg-color-teal text-color-white"-->
+                                <ul>
+                                    <li><a id="enlace-perfil" href="/perfil/" data-view=".view-main" class="panel-close">Mi perfil<i class="icon material-icons">account_circle</i></a></li>
+                                    <li><a id="enlace-estructura" href="/estructura/" data-view=".view-main" class="panel-close desactivada">Estructura de sueldo<i class="icon material-icons">assignment</i></a></li>
+                                    <li><a id="enlace-boleta" href="/boleta/" data-view=".view-main" class="panel-close desactivada">Boleta del mes<i class="icon material-icons">insert_drive_file</i></a></li>
+                                    <li><a id="enlace-liquidacion" href="/liquidacion/" data-view=".view-main" class="panel-close desactivada">Cálculo de liquidación<i class="icon material-icons">transfer_within_a_station</i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>      	
+                </div>	
+            </div>
+
+            <!-- Your main view, should have "view-main" class -->
+            <div class="view view-main safe-areas">
+                <!-- Page, data-name contains page name which can be used in callbacks -->
+                <div class="page" data-name="home">
+                    <!-- Top Navbar -->
+
+                    <div class="navbar bg-color-teal text-color-white">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <a href="#" class="link icon-only panel-open color-white" data-panel="left">
+                                    <i class="icon f7-icons ios-only color-white">menu</i>
+                                    <i class="icon material-icons md-only color-white">menu</i>
+                                </a>
+                            </div>
+                            <div class="title sliding"><b>LaboralApp</b></div>
+                            <div class="right"></div>
+                        </div>
+                    </div>
+
+                    <!-- Scrollable page content-->
+                    <div id="page-content-main" class="page-content view-content">
+
+                        <div class="block block-strong">
+                            <h2>Bienvenid@ a LaboralApp</h2>
+
+                            <p> <img src="img/img_principal_4.jpg" width="300" height="150"/></p>
+                            <p>Esta sencilla aplicación nos permitirá realizar cálculos relacionados a aspectos laborales.
+
+                                Cuenta con opciones para:
+
+                            <ul>
+                                <li>Registrar un perfil, de acuerdo a mis condiciones laborales.</li>
+                                <li>Calcular la estructura de mi sueldo.</li>
+                                <li>Calcular el monto de boleta del mes que requiera.</li>
+                                <li>Calcular mi liquidación de beneficios sociales.</li>
+                            </ul>
+
+                            Asimismo, pronto encontrarás nuevas opciones.
+
+                            <h4>¡Esperamos la disfrutes!</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="packages/core/js/framework7.bundle.min.js"></script>
+
+        <script type="text/javascript" src="cordova.js"></script>
+
+        <script type="text/javascript" src="handler/DatabaseHandler.js"></script>
+
+        <script type="text/javascript" src="handler/EntidadSistemaPensionHandler.js"></script>
+
+        <script type="text/javascript" src="handler/PerfilHandler.js"></script>
+
+        <script type="text/javascript" src="handler/ComisionEntidadPensionHandler.js"></script>
+
+        <script type="text/javascript" src="handler/BeneficiosLeyesSocialesHandler.js"></script>
+
+        <script type="text/javascript" src="handler/AsignacionFamiliarHandler.js"></script>
+
+        <script type="text/javascript" src="handler/AnioHandler.js"></script>
+
+        <script type="text/javascript" src="js/Rutas.js"></script>
+
+        <script type="text/javascript" src="js/MiAplicacion.js"></script>
+
+        <script type="text/javascript" src="js/Perfil.js"></script>
+
+        <script type="text/javascript" src="js/EstructuraSueldo.js"></script>
+
+        <script type="text/javascript" src="js/ComisionEntidadPension.js"></script>
+
+        <script type="text/javascript" src="js/BeneficiosLeyesSociales.js"></script>
+
+        <script type="text/javascript" src="js/AsignacionFamiliar.js"></script>
+
+        <script type="text/javascript" src="js/Anio.js"></script>
+
+        <script type="text/javascript" src="js/BoletaMes.js"></script>
+
+        <script type="text/javascript" src="js/Liquidacion.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,11 @@
+/* Limit resizable panel width */
+.panel {
+  min-width: 100px;
+  max-width: 70vw;
+}
+
+/*
+    ****Se modificó archivo framework7.bundle.css con la finalidad de obtener visibilidad de los íconos del menú
+        font-family: 'Material Icons';
+        content: 'keyboard_arrow_right';
+}*/
