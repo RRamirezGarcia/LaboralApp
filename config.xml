@@ -1,9 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.phonegap.laboralapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" 
         xmlns:gap="http://phonegap.com/ns/1.0"
-        android-versionCode="7"
-        ios-CFBundleVersion="3.3.3"
-        android:debuggable="false">
+        ios-CFBundleVersion="3.3.3">
     <name>LaboralApp</name>
     <description>
         A blank PhoneGap app.
@@ -16,5 +14,7 @@
     <platform name="android">
         <preference name="android-minSdkVersion" value="19" />
         <preference name="android-targetSdkVersion" value="28" />
+        <preference name="android-debuggable" value="false" />
+        <preference name="android-versionCode" value="7" />
     </platform>
 </widget>
