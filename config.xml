@@ -2,7 +2,8 @@
 <widget id="com.phonegap.laboralapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" 
         xmlns:gap="http://phonegap.com/ns/1.0"
         android-versionCode="7"
-        ios-CFBundleVersion="3.3.3">
+        ios-CFBundleVersion="3.3.3"
+        android:debuggable="false">
     <name>LaboralApp</name>
     <description>
         A blank PhoneGap app.
