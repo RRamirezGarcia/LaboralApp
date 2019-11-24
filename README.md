@@ -17,7 +17,7 @@ La versión que se muestra en este repositorio es 1.1, la cual incluye: Registra
 El aplicativo se encuentra registrado en mi cuenta personal de Play Store, al cual pueden acceder a través de la siguiente ruta: 
 https://play.google.com/store/apps/details?id=com.phonegap.laboralapp
 
-Asimismo, brindo los pasos para desplegar aplicativos similares en dicha plataforma:
+Brindo los pasos que utilicé para desplegar mi aplicativo en dicha plataforma, y que puede ser de gran utilidad para ustedes:
 
 **#generar apk:**
 cordova build android --release
