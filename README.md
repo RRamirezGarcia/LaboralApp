@@ -19,6 +19,7 @@ https://play.google.com/store/apps/details?id=com.phonegap.laboralapp
 
 Brindo los pasos que utilicé para desplegar mi aplicativo en dicha plataforma, y que puede ser de gran utilidad para ustedes:
 
+**Mediante archivo APK**
 **#generar apk:**
 cordova build android --release
 
@@ -34,8 +35,18 @@ keytool -keystore laboralapp.keystore -list -v
 **#optimizar y renombrar la aplicacion:**
 zipalign -v 4 app-release-unsigned.apk laboralapp.apk
 
+**Mediante Bundle**
+
+**#Construir:**
+cordova build android --release --prod
 
 **#En carpeta ./platforms/android/ ejecutar el siguiente comando, para generar bundle con la finalidad de subirlo al google play:**
 gradlew app:bundleRelease
+
+**#firmar la aplicacion:**
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore laboralapp.keystore app.aab laboral
+
+**#optimizar y renombrar la aplicacion:**
+zipalign -v 4 app.aab laboralappv1.3.aab
 
 **#El nombre laboralapp deberá ser reemplazado por el nombre de su aplicación.**
